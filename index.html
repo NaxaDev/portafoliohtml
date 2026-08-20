@@ -276,7 +276,6 @@ html.light .social-btn:hover{background:rgba(255,255,255,.95);border-color:rgba(
       </article>
 
       <article class="proyecto-card">
-        <!-- ÍCONO DEL GRIEGO ACTUALIZADO -->
         <img src="https://z-cdn-media.chatglm.cn/files/8e963c26-267e-49f1-98ce-abe70d92baf6.png?auth_key=1885305701-746e73c00f27469eb151a8d11324c092-0-b86d235ec7a51c0893e6cf26414e2c38" alt="El Griego Icono" class="proyecto-img">
         <div class="proyecto-body">
           <div class="proyecto-num">04</div>
@@ -286,6 +285,32 @@ html.light .social-btn:hover{background:rgba(255,255,255,.95);border-color:rgba(
           </div>
           <p class="proyecto-desc">Sitio web para restaurante de comida griega. Diseño enfocado en resaltar los platillos mediterráneos con una interfaz intuitiva, moderna y apetitosa.</p>
           <a href="https://el-griego.vercel.app/" target="_blank" rel="noopener" class="proyecto-link">Ver proyecto</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card">
+        <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aura Portfolio" class="proyecto-img">
+        <div class="proyecto-body">
+          <div class="proyecto-num">05</div>
+          <div class="proyecto-header">
+            <h3 class="proyecto-title">Aura</h3>
+            <span class="proyecto-tag">Portfolio</span>
+          </div>
+          <p class="proyecto-desc">Portafolio personal con diseño inmersivo y estética envolvente. Experiencia visual cuidada al detalle con animaciones fluidas y una narrativa que transmite identidad.</p>
+          <a href="https://aura-3bmsgaz1j-alejandro-portfolio.vercel.app/" target="_blank" rel="noopener" class="proyecto-link">Ver proyecto</a>
+        </div>
+      </article>
+
+      <article class="proyecto-card">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Oasis 2 Neon" class="proyecto-img">
+        <div class="proyecto-body">
+          <div class="proyecto-num">06</div>
+          <div class="proyecto-header">
+            <h3 class="proyecto-title">Oasis 2</h3>
+            <span class="proyecto-tag">Diseño Neon</span>
+          </div>
+          <p class="proyecto-desc">Proyecto con estética neón vibrante y atmósfera digital inmersiva. Diseño oscuro con acentos luminosos que crean una experiencia visual única y memorable.</p>
+          <a href="https://oasis2-neon.vercel.app/" target="_blank" rel="noopener" class="proyecto-link">Ver proyecto</a>
         </div>
       </article>
       
@@ -345,7 +370,7 @@ html.light .social-btn:hover{background:rgba(255,255,255,.95);border-color:rgba(
 <script>
 (function(){
   var canvas=document.getElementById('bg-canvas');var ctx=canvas.getContext('2d');var W,H,t=0;var particles=[],lines=[],circles,kanjis;var gridCanvas=null;
-  function buildGrid(){gridCanvas=document.createElement('canvas');gridCanvas.width=W;gridCanvas.height=H;var gc=gridCanvas.getContext('2d');var gs=70;for(var gx=0;gx<W;gx+=gs){for(var gy=0;gy<H;gy+=gs){var d=Math.sqrt((gx-W*.5)*(gx-W*.5)+(gy-H*.5)*(gy-H*.5));var a=Math.max(0,0.05-d/7000);if(a>0){gc.beginPath();gc.arc(gx,gy,0.8,0,Math.PI*2);gc.fillStyle='rgba(255,255,255,'+a+')';gc.fill();}}}}
+  function buildGrid(){gridCanvas=document.createElement('canvas');gridCanvas.width=W;gridCanvas.height=H;var gc=gridCanvas.getContext('2d');var gs=70;for(var gx=0;gx<W;gx+=gs){for(var gy=0;gy<H;gy+=gs){var d=Math.sqrt((gx-W*.5)*(gx-W*.5)+(gy-H*.5)*(gy-H*.5));var a=Math.max(0,0.05-d/7000);if(a>0){gc.beginPath();gc.arc(gx,gy,0.8,0,Math.PI*2);gc.fillStyle='rgba(255,255,255,'+a+')';gc.fill();}}} }
   function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;buildGrid();}
   resize();window.addEventListener('resize',function(){clearTimeout(resizeTimer);resizeTimer=setTimeout(resize,150);});var resizeTimer;
   for(var i=0;i<45;i++){particles.push({x:(Math.random()-0.5)*2000,y:(Math.random()-0.5)*2000,z:Math.random()*1000,size:Math.random()*1.4+0.3,speed:Math.random()*0.4+0.1,color:Math.random()>0.6?'rgba(215,38,56,':'rgba(201,168,106,'});}
