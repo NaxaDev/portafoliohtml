@@ -2471,10 +2471,19 @@
       size();
       if (reduce) still(); else start();
 
-      var rt;
+      var rt, lastW = W, lastH = H;
       addEventListener('resize', function () {
         clearTimeout(rt);
-        rt = setTimeout(function () { size(); if (reduce) still(); }, 160);
+        rt = setTimeout(function () {
+          var nw = cv.clientWidth, nh = cv.clientHeight;
+          // En móvil, mostrar/ocultar la barra de direcciones al hacer scroll
+          // dispara 'resize' sin cambiar el ancho. Recalcular el árbol entero
+          // (recursivo) en medio del scroll es lo que causaba el lag: solo
+          // lo rehacemos si el tamaño cambió de verdad.
+          if (nw === lastW && Math.abs(nh - lastH) < 120) return;
+          lastW = nw; lastH = nh;
+          size(); if (reduce) still();
+        }, 160);
       });
       document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
     })();
